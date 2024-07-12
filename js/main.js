@@ -14,7 +14,8 @@ $(document).ready(function(){
 	$("#navigation").sticky({
 		topSpacing : 75,
 	});
-
+    
+    
 	$('#nav').onePageNav({
 		currentClass: 'current',
 		changeHash: false,
