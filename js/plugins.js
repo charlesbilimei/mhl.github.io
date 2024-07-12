@@ -39,6 +39,12 @@
 /*global dragMove: false, dragEnd: false, $, jQuery, alert, window, document */
 /*jslint nomen: true, continue:true */
 
+function hideLoadingAnimation(image) {
+    const loadingAnimation = image.previousElementSibling;
+    loadingAnimation.style.display = 'none';
+    image.style.display = 'block';
+}
+
 if (typeof Object.create !== "function") {
     Object.create = function (obj) {
         function F() {}
@@ -1761,6 +1767,7 @@ if (typeof Object.create !== "function") {
                 }
             }
         },
+        
         
         unbindInterval: function() {
             clearInterval(this.t);
